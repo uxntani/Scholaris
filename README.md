@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/uxntani/Scholaris/blob/main/Chat%20Area.png)
+![Screenshot](https://github.com/uxntani/Scholaris/blob/main/readme-assets/Logo.png)
 
 <div align="center">
 <br/>
