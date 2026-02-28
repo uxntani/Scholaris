@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scholaris – AI Tutor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="assets/logo.png" alt="Scholaris Logo" class="logo" />
+    <h1 class="header-title">Scholaris</h1>
+  </div>
+
+  <!-- Side Navigation -->
+  <div class="side-nav">
+
+    <!-- Profile -->
+    <div class="nav-item tooltip" onclick="toggleProfile()">
+      <div class="sidebar-avatar" id="sidebarAvatar">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <span class="tooltip-text">Profile</span>
+    </div>
+    <!-- Clear Chat -->
+    <div class="nav-item tooltip" onclick="clearChat()">
+      <i class="fa-solid fa-trash"></i>
+      <span class="tooltip-text">Clear chat</span>
+    </div>
+    <!-- Analytics -->
+    <div class="nav-item tooltip" onclick="toggleAnalytics()">
+      <i class="fa-solid fa-chart-simple"></i>
+      <span class="tooltip-text">Chats</span>
+    </div>
+    <!-- Settings -->
+    <div class="nav-item tooltip">
+      <i class="fa-solid fa-gear"></i>
+      <span class="tooltip-text">Settings</span>
+    </div>
+    <!-- Logout -->
+    <div class="nav-item tooltip" onclick="logout()">
+      <i class="fa-solid fa-right-from-bracket"></i>
+      <span class="tooltip-text">Logout</span>
+    </div>
+    <!-- More -->
+    <div class="nav-item tooltip" onclick="togglePlanner()">
+      <i class="fa-solid fa-calendar"></i>
+      <span class="tooltip-text">Planner</span>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <div class="main-container">
+    <div class="chat-container">
+
+      <!-- Welcome -->
+      <div class="welcome-message">
+        <h2>👋 Welcome to Scholaris</h2>
+        <p>Your exam-focused AI tutor</p>
+      </div>
+
+      <!-- Prompts -->
+      <div class="prompts-container">
+        <button class="prompt-btn" onclick="usePrompt('Explain this topic step by step')">💡 Understand Topic</button>
+        <button class="prompt-btn" onclick="usePrompt('Analyze my exam answer and give feedback')">📝 Exam Feedback</button>
+        <button class="prompt-btn" onclick="usePrompt('Create flashcards for revision')">🎴 Flashcards</button>
+        <button class="prompt-btn" onclick="usePrompt('Generate exam-style questions')">❓ Generate Questions</button>
+        <button class="prompt-btn" onclick="usePrompt('Help me rate and enhance this essay on parameter of grammar, spelling and punctuation')">📝 Rate & Enhance Essay</button>
+        <button class="prompt-btn" onclick="usePrompt('Solve this mathematical problem for me')">➗ Solve Math Problem</button>
+        <button class="prompt-btn" onclick="usePrompt('Solve this equation')">🔢 Solve Equation</button>
+      </div>
+
+      <!-- Messages -->
+      <div class="messages-area" id="messagesArea"></div>
+
+      <!-- AI Status -->
+      <div class="ai-status" id="aiStatus">
+        <span class="dot">•</span><span class="dot">•</span><span class="dot">•</span>
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="typing-indicator" id="typingIndicator">
+        <span> </span>
+        <span> </span>
+        <span> </span>
+      </div>
+
+      <!-- Input -->
+      <div class="input-container">
+        <div class="input-wrapper">
+          <span id="fileIndicator"></span>
+          <input
+            type="text"
+            class="message-input"
+            id="messageInput"
+            placeholder="Speak your mind..."
+            onkeypress="handleKeyPress(event)"
+          >
+        </div>
+        <label for="fileUpload" class="file-upload-label">
+              <i class="fa-solid fa-link"></i>
+          </label>
+                    <input 
+                        type="file" 
+                        id="fileUpload" 
+                        class="file-upload-input"
+                        onchange="handleFileUpload(event)"
+                        accept=".txt,.pdf,.doc,.docx,.png,.jpg,.jpeg"
+                    >          
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Chat History Panel -->
+  <div class="analytics-panel" id="analyticsPanel">
+    <div class="analytics-header">
+      <h2>Chats</h2>
+      <button class="close-analytics" onclick="closePanels()">×</button>
+    </div>
+    <div class="history-list" id="chatHistoryList"></div>
+  </div>
+
+  <!-- Profile Panel -->
+<div class="profile-panel" id="profilePanel">
+  <div class="profile-header">
+    <h2>Edit Profile</h2>
+    <button class="close-profile" onclick="closePanels()">×</button>
+  </div>
+
+  <div class="profile-preview" id="profilePreview">
+    <div class="profile-preview-placeholder">👤</div>
+  </div>
+
+  <div class="name-editor">
+    <div class="section-title">Username</div>
+    <input type="text" id="nameInput" placeholder="Enter your name" value="Guest User">
+  </div>
+
+  <div class="upload-section">
+    <div class="section-title">Upload Custom Picture</div>
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+      📁 Choose from Device
+    </button>
+  </div>
+
+  <div class="divider">Or Choose an Avatar</div>
+  <div class="avatars-grid" id="avatarsGrid"></div>
+  <button class="save-btn" onclick="saveProfile()">Save Changes</button>
+
+</div>
+<!-- Study Planner Panel -->
+<div class="planner-panel" id="plannerPanel">
+  <div class="planner-header">
+    <h2>Study Planner</h2>
+    <button class="planner-close-btn" onclick="closePanels()">×</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="planner-controls">
+    <div class="planner-week-nav">
+      <button class="planner-nav-btn" onclick="changeWeek(-1)">&#8249; Prev</button>
+      <span class="planner-week-label" id="plannerWeekLabel"></span>
+      <button class="planner-nav-btn" onclick="changeWeek(1)">Next &#8250;</button>
+    </div>
+    <div class="planner-interval-row">
+      <label class="planner-label">Slot duration:</label>
+      <input type="number" id="plannerIntervalValue" class="planner-interval-input" value="1" min="1" max="60">
+      <select id="plannerIntervalUnit" class="planner-interval-select">
+        <option value="hours">Hours</option>
+        <option value="minutes">Minutes</option>
+      </select>
+      <button class="planner-gen-btn" onclick="generateTimeGrid()">Generate</button>
+    </div>
+  </div>
+
+  <!-- Grid -->
+  <div class="planner-grid-wrapper">
+    <div class="planner-grid" id="plannerGrid"></div>
+  </div>
+
+  <!-- NEW -->
+<div class="planner-analytics" id="plannerAnalytics">
+  <div class="planner-analytics-toggle" onclick="togglePlannerAnalytics()">
+    <div class="planner-analytics-title">📊 Weekly Summary</div>
+    <span class="planner-analytics-chevron">▲</span>
+  </div>
+  <div class="planner-analytics-body" id="plannerAnalyticsBody">
+    <div class="planner-stats-row" id="plannerStatsRow"></div>
+    <div class="planner-bars" id="plannerBars"></div>
+  </div>
+</div>
+</div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="closePanels()"></div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
