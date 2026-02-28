@@ -1,4 +1,4 @@
-<img width="1489" height="370" alt="Screenshot 2026-02-20 195740" src="https://github.com/user-attachments/assets/0ac154a0-06ad-4c85-80a5-47ee8a56e124" />
+[<img width="1489" height="370" alt="Screenshot 2026-02-20 195740" src="https://github.com/user-attachments/assets/0ac154a0-06ad-4c85-80a5-47ee8a56e124" />](https://github.com/uxntani/Scholaris/blob/main/Chat%20Area.png)
 
 <div align="center">
 <br/>
