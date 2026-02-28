@@ -1,4 +1,4 @@
-![Screenshot](https://github.com/uxntani/Scholaris/blob/main/Chat%20Area.png)
+![Screenshot](https://raw.githubusercontent.com/uxntani/Scholaris/refs/heads/main/readme-assets/logo.png)
 
 <div align="center">
 <br/>
@@ -15,8 +15,6 @@
 
 <br/>
 
-<!-- Replace with your actual screenshot -->
-![Scholaris Banner](./gifs/banner.gif)
 
 </div>
 
@@ -31,7 +29,7 @@ Students today juggle **5+ different apps** just to study effectively — a chat
 ---
 ## This is the Architecture Diagram
 
-<img width="720" height="720" alt="Frontend (Web App)" src="https://github.com/user-attachments/assets/a37eb879-c069-4dbf-86df-95e7e5696a0e" />
+![Screenshot](https://raw.githubusercontent.com/uxntani/Scholaris/refs/heads/main/readme-assets/workflow.png)
 
 
 ## Features
@@ -88,7 +86,7 @@ The planner is Scholaris's standout feature. It's not just a to-do list — it's
 
 # This is how it looks:
 
-<img width="720" height="720" alt="study planner" src="https://github.com/user-attachments/assets/9364c1e5-35d4-4c45-9fdd-d29010807ce5" />
+![Screenshot](https://raw.githubusercontent.com/uxntani/Scholaris/refs/heads/main/readme-assets/planner.png)
 
 
 **Built-in logic that makes it smart:**
@@ -103,13 +101,13 @@ The planner is Scholaris's standout feature. It's not just a to-do list — it's
 
 ## This how the Profile customization page looks like 
 
-<img width="720" height="720" alt="profile" src="https://github.com/user-attachments/assets/713dd82f-6fe8-4d26-a0fb-28dc19b1f31f" />
+![Screenshot](https://raw.githubusercontent.com/uxntani/Scholaris/refs/heads/main/readme-assets/profile.png)
 
 ---
 
 ## This is how our Chat Interface looks like
 
-<img width="720" height="720" alt="chat area" src="https://github.com/user-attachments/assets/4e86f55b-5efa-43d0-82d5-2ebe13a6279c" />
+![Screenshot](https://raw.githubusercontent.com/uxntani/Scholaris/refs/heads/main/readme-assets/chat.png)
 
 ---
 
