@@ -230,3 +230,18 @@ Error: 500 Internal Server Error: model requires more system memory
 3. The model should now start successfully and launch a local chat session — confirming Ollama is running in the background. 🎉
 
 ---
+### 5️⃣ Run the main.py file
+
+Open a new terminal in your desired text editor and type:
+```bash
+cd backend
+```
+
+> This will take you to the backend directory where your main.py file is located.
+
+Type:
+```bash
+python -m uvicorn main:app --reload
+```
+
+> This will start running your backend in the server to fetch data between user and AI model.
