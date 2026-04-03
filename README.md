@@ -7,11 +7,11 @@
 
 <br/>
 
-[![HTML](https://img.shields.io/badge/Frontend-HTML-e34f26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/helloiamsuchi/scholaris)
-[![CSS](https://img.shields.io/badge/Frontend-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/helloiamsuchi/scholaris)
-[![JavaScript](https://img.shields.io/badge/Frontend-JS-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/helloiamsuchi/scholaris)
-[![Backend](https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/helloiamsuchi/scholaris)
-[![AI Powered](https://img.shields.io/badge/AI-Powered-8b5cf6?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/helloiamsuchi/scholaris)
+[![HTML](https://img.shields.io/badge/Frontend-HTML-e34f26?style=for-the-badge&logo=html5&logoColor=white)](https://github.com/uxntani/batchtrack)
+[![CSS](https://img.shields.io/badge/Frontend-CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://github.com/uxntani/batchtrack)
+[![JavaScript](https://img.shields.io/badge/Frontend-JS-f7df1e?style=for-the-badge&logo=javascript&logoColor=black)](https://github.com/uxntani/batchtrack)
+[![Backend](https://img.shields.io/badge/Backend-Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://github.com/uxntani/batchtrack)
+[![AI Powered](https://img.shields.io/badge/AI-Powered-8b5cf6?style=for-the-badge&logo=openai&logoColor=white)](https://github.com/uxntani/batchtrack)
 
 <br/>
 
